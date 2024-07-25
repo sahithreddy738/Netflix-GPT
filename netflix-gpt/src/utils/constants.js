@@ -1,0 +1,4 @@
+export const NETFLIX_LOGO="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png";
+export const NETFLIX_BACKGROUND_IMAGE="https://assets.nflxext.com/ffe/siteui/vlv3/655a9668-b002-4262-8afb-cf71e45d1956/5ff265b6-3037-44b2-b071-e81750b21783/IN-en-20240715-POP_SIGNUP_TWO_WEEKS-perspective_WEB_c6d6616f-4478-4ac2-bdac-f54b444771dd_medium.jpg";
+export const NETFLIX_USER_ICON="https://preview.redd.it/sgfxdosc4qo81.png?width=338&format=png&auto=webp&s=68081fe5673ff6ac567a531ae01a786ca80695f6";
+export const SIGNOUT_ICON="https://png.pngtree.com/background/20240302/original/pngtree-arrow-right-flat-red-color-icon-black-background-east-point-photo-picture-image_7920466.jpg";
