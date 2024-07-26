@@ -42,8 +42,8 @@ const Header = () => {
   return (
     <>
       {user ? (
-        <div className="flex justify-between bg-black">
-          <div className="mx-4 ">
+        <div className="flex justify-between w-full absolute z-10">
+          <div className="mx-4">
             <img src={NETFLIX_LOGO} alt="netflix-logo" className="w-44"></img>
           </div>
 
@@ -55,7 +55,7 @@ const Header = () => {
               <img
                 src={SIGNOUT_ICON}
                 alt="signout-icon"
-                className="w-8 bg-black cursor-pointer"
+                className="w-8 cursor-pointer"
                 onClick={handleSignout}
               ></img>
             </div>
