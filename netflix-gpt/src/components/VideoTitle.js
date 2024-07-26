@@ -3,7 +3,7 @@ import { NETFLIX_PLAY_ICON } from "../utils/constants";
 
 const VideoTitle = ({ title, overview }) => {
   return (
-    <div className=" absolute pt-40 h-full text-white  bg-gradient-to-r from-black">
+    <div className=" absolute pt-40 w-full h-full text-white  bg-gradient-to-r from-black">
       <div className="w-4/12 pl-10 flex flex-col space-y-6">
         <h1 className="font-bold text-4xl">{title}</h1>
         <p className="">{overview}</p>
