@@ -12,32 +12,13 @@ import { auth } from "../utils/firebaseConfig";
 import { toggleGptView } from "../utils/slices/gptSearchSlice";
 import { setLanguage } from "../utils/slices/configSlice";
 import languageWords from "../utils/languageConstants";
+import useAuthStateChange from "../hooks/useAuthStateChange";
 
 const Header = () => {
   const user = useSelector((store) => store.user);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const showGptView = useSelector((store) => store.gptSearch.showGptView);
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if (currentUser) {
-        const { displayName, uid, email, photoURL } = currentUser;
-        dispatch(
-          addUser({
-            userName: displayName,
-            userId: uid,
-            userEmail: email,
-            userPhoto: photoURL,
-          })
-        );
-        navigate("/browse");
-      } else {
-        dispatch(removeUser());
-        navigate("/");
-      }
-    });
-    return () => unsubscribe();
-  }, []);
+  useAuthStateChange();
   const language=useSelector((store)=>store.appConfig.language);
   const handleSignout = async () => {
     try {
