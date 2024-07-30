@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../components/Login";
 import Browse from "../components/Browse";
+import MovieInfoPage from "../components/MovieInfoPage";
+import CustomError from "../components/CustomError";
 
 export const appRouter=createBrowserRouter([
     {
@@ -13,6 +15,12 @@ export const appRouter=createBrowserRouter([
     },
     {
        path:"/browse",
-       element:<Browse />
+       element:<Browse />,
+       errorElement:<CustomError/>
+    },
+    {
+      path:"/movie-info/:movieId",
+      element:<MovieInfoPage/>,
+      ErrorBoundary:CustomError
     }
  ])

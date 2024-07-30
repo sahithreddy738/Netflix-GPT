@@ -8,6 +8,8 @@ export const SIGNOUT_ICON =
   "https://png.pngtree.com/background/20240302/original/pngtree-arrow-right-flat-red-color-icon-black-background-east-point-photo-picture-image_7920466.jpg";
 export const NETFLIX_PLAY_ICON =
   "https://miro.medium.com/v2/da:true/resize:fit:768/1*IDJ4x4E-bOypnEZdA5TGHQ.gif";
+export const LEFT_ARROW_ICON="https://png.pngtree.com/png-clipart/20230805/original/pngtree-round-button-in-intensive-red-and-black-colors-with-a-leftfacing-flat-arrow-vector-picture-image_9713933.png";
+export const USER_NOT_FOUND_ICON="https://e7.pngegg.com/pngimages/141/425/png-clipart-user-profile-computer-icons-avatar-profile-s-free-angle-rectangle.png";
 export const API_OPTIONS = {
   method: "GET",
   headers: {
@@ -27,6 +29,10 @@ export const UPCOMING_MOVIES_URL =
 export const MOVIE_VIDEOS_URL1 = "https://api.themoviedb.org/3/movie/";
 export const MOVIE_VIDEOS_URL2 = "/videos?language=en-US";
 export const MOVIE_IMAGES_CDN_URL = "https://image.tmdb.org/t/p/w500/";
+export const MOVIE_DETAILS_URL="https://api.themoviedb.org/3/movie/";
+export const MOVIE_CAST_URL1="https://api.themoviedb.org/3/movie/"
+export const MOVIE_CAST_URL2="/credits";
+
 export const LANGUAGE_OPTIONS = [
   { name: "English", value: "en" },
   { name: "Hindi", value: "hindi" },

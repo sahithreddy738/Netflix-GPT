@@ -1,10 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import MovieList from "./MovieList";
+import Shimmer from "./Shimmer";
 
 const SecondaryContainer = () => {
   const movies = useSelector((store) => store.movies);
-  if (!movies) return;
+  if (!movies) return <Shimmer />;
   return (
     <div className="bg-black">
       <div className="-mt-48 flex flex-col space-y-4">
