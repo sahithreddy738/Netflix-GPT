@@ -17,15 +17,15 @@ const MovieDetailsCard = () => {
     vote_average,
   } = movieDetails;
   return (
-    <div className="flex flex-row space-x-3">
-      <div className="m-4">
+    <div className="flex flex-row space-x-3 overflow-x-scroll hide-scrollbar">
+      <div className="m-2 md:m-4 flex-shrink-0">
         <img
           alt="movie-poster"
           src={MOVIE_IMAGES_CDN_URL + poster_path}
-          className="w-[300px] h-auto"
+          className="w-36 sm:w-52 md:w-[250px] h-auto"
         ></img>
       </div>
-      <div className="flex flex-col items-start  space-y-4 mt-2">
+      <div className="flex flex-col items-start space-y-3 md:space-y-4 mt-2">
         <h1 className="font-bold text-xl">{original_title}</h1>
         <p className="">{overview}</p>
         <div className="flex flex-row">

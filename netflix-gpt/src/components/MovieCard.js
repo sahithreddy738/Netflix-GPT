@@ -14,7 +14,7 @@ const MovieCard = ({ moviePoster,movieId }) => {
     navigate("/movie-info/"+movieId);
   }
   return (
-    <div className="w-48 flex-shrink-0 cursor-pointer" onClick={handleMovieClick}>
+    <div className="w-44 md:w-48 flex-shrink-0 cursor-pointer" onClick={handleMovieClick}>
       <img src={MOVIE_IMAGES_CDN_URL + moviePoster} alt="movie-poster" className="rounded-md"></img>
     </div>
   );
