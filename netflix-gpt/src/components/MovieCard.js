@@ -10,7 +10,6 @@ const MovieCard = ({ moviePoster,movieId }) => {
  const dispatch=useDispatch(); 
  const handleMovieClick=() =>{
     dispatch(toggleMovieInfo());
-    console.log(movieId);
     navigate("/movie-info/"+movieId);
   }
   return (

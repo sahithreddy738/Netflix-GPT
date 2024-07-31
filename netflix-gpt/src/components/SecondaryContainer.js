@@ -8,7 +8,7 @@ const SecondaryContainer = () => {
   if (!movies) return <Shimmer />;
   return (
     <div className="bg-black">
-      <div className="-mt-48 flex flex-col space-y-4">
+      <div className="-mt-48 flex flex-col">
         <MovieList
           title={"Now Playing"}
           movieData={movies.nowPlayingMovies}

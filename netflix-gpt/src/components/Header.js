@@ -7,7 +7,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import {  signOut } from "firebase/auth";
 import { auth } from "../utils/firebaseConfig";
-import { toggleGptView } from "../utils/slices/gptSearchSlice";
+import { addGptSearchResult, addMoviesBasedOnSearch, toggleGptView } from "../utils/slices/gptSearchSlice";
 import { setLanguage } from "../utils/slices/configSlice";
 import languageWords from "../utils/languageConstants";
 import useAuthStateChange from "../hooks/useAuthStateChange";
@@ -18,6 +18,7 @@ const Header = () => {
   const showGptView = useSelector((store) => store.gptSearch.showGptView);
   useAuthStateChange();
   const language=useSelector((store)=>store.appConfig.language);
+  const {gptSearchResult,moviesBasedOnSearch}=useSelector((store)=>store.gptSearch);
   const handleSignout = async () => {
     try {
       await signOut(auth);
@@ -27,6 +28,10 @@ const Header = () => {
   };
   const handleGptToggle = () => {
     dispatch(toggleGptView());
+    if(gptSearchResult?.length>0 && moviesBasedOnSearch?.length>0) {
+      dispatch(addGptSearchResult(null));
+      dispatch(addMoviesBasedOnSearch(null));
+    }
   };
   const handleLanguageChange = (e) => {
     dispatch(setLanguage(e.target.value));
