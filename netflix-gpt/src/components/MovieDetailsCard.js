@@ -12,7 +12,7 @@ const MovieDetailsCard = () => {
     poster_path,
     runtime,
     overview,
-    adult,
+    original_language,
     release_date,
     vote_average,
   } = movieDetails;
@@ -36,7 +36,7 @@ const MovieDetailsCard = () => {
         <h3>Rating:{vote_average.toFixed(1)}</h3>
         <h3>{release_date}</h3>
         <h3>{runtime} minutes</h3>
-        <span>{adult ? "A" : ""}</span>
+        <span>original language : {original_language}</span>
       </div>
     </div>
   );
