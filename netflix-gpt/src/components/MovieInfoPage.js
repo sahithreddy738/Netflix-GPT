@@ -21,9 +21,6 @@ const MovieInfoPage = () => {
   useMovieDetails(movieId);
   useMovieCast(movieId);
   useMovieVideos(movieId);
-  // const {movieDetails}=useSelector((store)=>store.movieInformation);
-  // if(!movieDetails) return;
-  // const {backdrop_path}=movieDetails;
   return (
     <div className="relative min-h-screen">
       <img
@@ -31,10 +28,10 @@ const MovieInfoPage = () => {
         alt="netflix-background-img"
         className="fixed w-full h-full object-cover"
       />
-      <div className="fixed top-4 left-4 w-16 cursor-pointer" onClick={()=>navigate(-1)}>
+      <div className="fixed top-4 left-4 w-14 md:w-16  cursor-pointer" onClick={()=>navigate(-1)}>
         <img src={LEFT_ARROW_ICON} alt="left-arrow" className="bg-cover" />
       </div>
-      <div className="relative z-10 bg-black bg-opacity-65 mx-auto top-16 p-6 w-[70%] text-white flex flex-col space-y-4">
+      <div className="text-white rounded-md flex flex-col space-y-4 relative  bg-black bg-opacity-65 mx-auto w-[90%] top-24  p-5  md:top-16 md:px-6 md:pt-6  md:w-[75%] ">
         <MovieDetailsCard />
         <MovieCast />
         <MovieVideos />

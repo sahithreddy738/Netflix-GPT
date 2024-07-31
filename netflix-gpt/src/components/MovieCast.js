@@ -18,7 +18,7 @@ const MovieCast = () => {
           filteredCast.map((character) => (
             <>
               <div
-                className="flex flex-col w-32 flex-shrink-0"
+                className="flex flex-col w-28 md:w-32 flex-shrink-0"
                 key={character.id}
               >
                 <img

@@ -21,15 +21,15 @@ const GptSearchBar = () => {
     console.log(chatCompletion.choices);
   };
   return (
-    <div className="w-[45%] flex flex-row space-x-4 p-4 bg-black bg-opacity-50 absolute top-20 left-96">
+    <div className="flex flex-row space-x-4 p-3 md:p-4 bg-black bg-opacity-50 absolute top-44 left-4 w-[92%] sm:left-6 md:top-20 md:w-[45%] md:left-48">
       <input
-        className=" w-[78%]  px-4 py-2 rounded-md "
+        className="w-[78%]  md:w-[78%] px-1 py-2 md:px-4 md:py-2 rounded-md "
         placeholder={languageWords[language].gptPlaceholder}
         ref={inputRef}
       ></input>
       <button
         onClick={handleSearchClick}
-        className="w-[22%] px-4 py-2 rounded-md bg-red-600 text-white cursor-pointer"
+        className="w-[20%] md:w-[22%] px-1 py-2 md:px-4 md:py-2 rounded-md bg-red-600 text-white cursor-pointer"
       >
         {languageWords[language].search}
       </button>

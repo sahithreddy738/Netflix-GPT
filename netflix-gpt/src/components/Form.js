@@ -65,16 +65,16 @@ const Form = () => {
   return (
     <form
       onSubmit={(e) => e.preventDefault()}
-      className="w-4/12 absolute top-[100px] left-[500px] px-16 py-14 bg-black text-white  rounded-lg opacity-90 bg-gradient-to-l  from-black"
+      className="w-3/4 left-[50px] px-8 py-10 absolute top-32 bg-black text-white  rounded-lg opacity-90 bg-gradient-to-l  from-black md:w-4/12 md:left-1/3 md:px-16 md:py-14"
     >
-      <h1 className="text-4xl text-white font-bold mt-2 mb-6">
+      <h1 className="text-3xl m-0 text-white font-bold mt-2 mb-6 md:text-4xl">
         {isSignIn ? "Sign In" : "Sign Up"}
       </h1>
       {!isSignIn ? (
         <input
           type="text"
           placeholder="Full Name"
-          className="w-full border border-gray-400 rounded-lg bg-black  p-4 my-4"
+          className="w-full border border-gray-400 rounded-lg bg-black p-4 my-4"
           ref={inputUsernameRef}
         ></input>
       ) : (
@@ -99,12 +99,12 @@ const Form = () => {
       >
         {isSignIn ? "Sign in" : "Sign up"}
       </button>
-      <div className="flex flex-row space-x-2 my-4">
-        <p className="text-lg text-gray-400">
+      <div className="w-full space-x-2 flex flex-row md:space-x-2 md:mt-2">
+        <p className="text-md md:text-lg text-gray-400">
           {isSignIn ? "New to Netflix?" : "Already registered?"}
         </p>
         <p
-          className="text-white text-lg cursor-pointer font-bold"
+          className="text-white text-md md:text-lg cursor-pointer font-bold"
           onClick={toggleSignIn}
         >
           {isSignIn ? "Sign up now." : "Sign in now."}

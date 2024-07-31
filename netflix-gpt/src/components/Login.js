@@ -7,11 +7,11 @@ const Login = () => {
   return (
     <div>
       <Header/>
-      <div>
+      <div className="">
         <img
           src={NETFLIX_BACKGROUND_IMAGE}
           alt="netflix-backgroung-img"
-          className="brightness-50"
+          className="fixed -z-10 brightness-50 h-full w-full object-cover md:w-full md:h-full"
         ></img>
       </div>
       <Form></Form>

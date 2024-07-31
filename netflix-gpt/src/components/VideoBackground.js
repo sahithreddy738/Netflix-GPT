@@ -12,9 +12,9 @@ const VideoBackground = ({ movieId }) => {
   );
   trailer = trailer.length === 0 ? trailer.push(movieVideos[0]) : trailer;
   return (
-    <div className="h-full">
+    <div className="-mt-36 md:-mt-0 md:h-screen">
       <iframe
-        className="w-full h-screen aspect-video"
+        className="aspect-video w-full h-screen"
         src={`https://www.youtube.com/embed/${trailer[0]?.key}?loop=1&autoplay=1&mute=1&playlist=${trailer[0]?.key}`}
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
