@@ -82,7 +82,7 @@ const Header = () => {
           </div>
         </div>
       ) : (
-        <div className="absolute  z-10 w-44 left-[110px] sm:left-28 md:w-52 md:left-[100px]">
+        <div className="fixed z-10 w-44 left-[110px] sm:left-28 md:w-52 md:left-[100px]">
           <img src={NETFLIX_LOGO} alt="netflix-logo"></img>
         </div>
       )}
