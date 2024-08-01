@@ -9,6 +9,7 @@ import { auth } from "../utils/firebaseConfig";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/slices/userSlice";
 
+
 const Form = () => {
   const [isSignIn, setIsSignIn] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -34,7 +35,7 @@ const Form = () => {
         .then(() => {
           updateProfile(auth.currentUser, {
             displayName: inputUsernameRef.current.value,
-            photoURL: `Netflix_user`,
+            photoURL: `Netflix_user.webp`,
           }).then(() => {
             const { displayName, photoURL, email, uid } = auth.currentUser;
             dispatch(
