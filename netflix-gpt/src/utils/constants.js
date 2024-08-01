@@ -33,7 +33,7 @@ export const MOVIE_DETAILS_URL="https://api.themoviedb.org/3/movie/";
 export const MOVIE_CAST_URL1="https://api.themoviedb.org/3/movie/"
 export const MOVIE_CAST_URL2="/credits";
 export const MOVIE_BY_NAME1="https://api.themoviedb.org/3/search/movie?query=";
-export const MOVIE_BY_NAME2="&include_adult=false&language=en-US&page=1";
+export const MOVIE_BY_NAME2="&language=en-US&page=1";
 export const LANGUAGE_OPTIONS = [
   { name: "English", value: "en" },
   { name: "Hindi", value: "hindi" },

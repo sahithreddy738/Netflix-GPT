@@ -3,7 +3,7 @@ import { getAnalytics } from "firebase/analytics";
 import {getAuth} from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAR9Tcr9Do-dKKr7KImeW7h6rI4KpetVW0",
+  apiKey: process.env.REACT_APP_FIREBASE_KEY,
   authDomain: "netflix-gpt-c5b78.firebaseapp.com",
   projectId: "netflix-gpt-c5b78",
   storageBucket: "netflix-gpt-c5b78.appspot.com",
