@@ -1,6 +1,5 @@
 import React from "react";
 import GptSearchBar from "./GptSearchBar";
-import { NETFLIX_BACKGROUND_IMAGE } from "../utils/constants";
 import GptMovieSuggestionList from "./GptMovieSuggestionList";
 
 
@@ -9,7 +8,7 @@ const GptSearch = () => {
     <div>
       <div>
         <img
-          src={NETFLIX_BACKGROUND_IMAGE}
+          src={`Netflix_background.jpg`}
           alt="netflix-backgroung-img"
           className="fixed -z-10 brightness-50 h-screen w-full object-cover md:w-full md:h-full"
         ></img>

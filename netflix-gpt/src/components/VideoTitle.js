@@ -1,5 +1,4 @@
 import React from "react";
-import { NETFLIX_PLAY_ICON } from "../utils/constants";
 
 const VideoTitle = ({ title, overview }) => {
   return (
@@ -12,7 +11,7 @@ const VideoTitle = ({ title, overview }) => {
             <div className="flex flex-row">
               <img
                 className="w-4"
-                src={NETFLIX_PLAY_ICON}
+                src={`Netflix_play_icon.gif`}
                 alt="play-icon"
               ></img>
               Play

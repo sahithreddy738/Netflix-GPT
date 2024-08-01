@@ -6,7 +6,6 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebaseConfig";
-import { NETFLIX_USER_ICON } from "../utils/constants";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/slices/userSlice";
 
@@ -35,7 +34,7 @@ const Form = () => {
         .then(() => {
           updateProfile(auth.currentUser, {
             displayName: inputUsernameRef.current.value,
-            photoURL: NETFLIX_USER_ICON,
+            photoURL: `Netflix_user`,
           }).then(() => {
             const { displayName, photoURL, email, uid } = auth.currentUser;
             dispatch(
