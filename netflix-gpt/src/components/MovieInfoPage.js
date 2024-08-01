@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import useMovieDetails from "../hooks/useMovieDetails";
 import useMovieCast from "../hooks/useMovieCast";
 import useMovieVideos from "../hooks/useMovieVideos";
-import {  LEFT_ARROW_ICON, MOVIE_IMAGES_CDN_URL, NETFLIX_BACKGROUND_IMAGE } from "../utils/constants";
+import {  LEFT_ARROW_ICON,NETFLIX_BACKGROUND_IMAGE } from "../utils/constants";
 import { useSelector } from "react-redux";
 import MovieDetailsCard from "./MovieDetailsCard";
 import MovieCast from "./MovieCast";
@@ -17,7 +17,7 @@ const MovieInfoPage = () => {
   useEffect(()=>{
     if(!user) navigate("/");
     window.scrollTo(0, 0);
-  },[]);
+  },[navigate,user]);
   useMovieDetails(movieId);
   useMovieCast(movieId);
   useMovieVideos(movieId);

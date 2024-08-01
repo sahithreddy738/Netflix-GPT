@@ -1,8 +1,6 @@
 import React from "react";
 import {
   LANGUAGE_OPTIONS,
-  NETFLIX_LOGO,
-  SIGNOUT_ICON,
 } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import {  signOut } from "firebase/auth";
@@ -11,6 +9,7 @@ import { addGptSearchResult, addMoviesBasedOnSearch, toggleGptView } from "../ut
 import { setLanguage } from "../utils/slices/configSlice";
 import languageWords from "../utils/languageConstants";
 import useAuthStateChange from "../hooks/useAuthStateChange";
+
 
 const Header = () => {
   const user = useSelector((store) => store.user);
@@ -41,7 +40,7 @@ const Header = () => {
       {user ? (
         <div className="flex justify-between w-full absolute z-10 flex-col space-y-2 top-3 md:top-0 md:flex-row">
           <div className="w-full mx-auto  md:mx-4 md:w-44 md:bg-none">
-            <img src={NETFLIX_LOGO} alt="netflix-logo" className="w-44 mx-auto md:mx-0"></img>
+            <img src={`Netflix_Logo_PMS.png`} alt="netflix-logo" className="w-44 mx-auto md:mx-0"></img>
           </div>
 
           <div className="flex flex-row space-x-4 mx-4 items-center justify-between">
@@ -78,7 +77,7 @@ const Header = () => {
             </div>
             <div className="mx-2 bg-transparent">
               <img
-                src={SIGNOUT_ICON}
+                src={`Netflix_right_arrow.jpg`}
                 alt="signout-icon"
                 className="w-8 cursor-pointer bg-opacity-50"
                 onClick={handleSignout}
@@ -88,7 +87,7 @@ const Header = () => {
         </div>
       ) : (
         <div className="fixed z-10 w-44 left-[110px] sm:left-28 md:w-52 md:left-[100px]">
-          <img src={NETFLIX_LOGO} alt="netflix-logo"></img>
+          <img src={`Netflix_Logo_PMS.png`} alt="netflix-logo"></img>
         </div>
       )}
     </>
