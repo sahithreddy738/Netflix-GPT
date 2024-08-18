@@ -21,7 +21,7 @@ const MovieVideos = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   ></iframe>
                 ) : (
-                  <div className="bg-gray-500"></div>
+                 <Shimmer />
                 )}
               </div>
               <div className="flex flex-col space-y-3 -ml-10 md:-ml-0  md:space-y-4">

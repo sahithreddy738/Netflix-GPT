@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, {  useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import languageWords from "../utils/languageConstants";
 import openai from "../utils/aiConfig";
@@ -10,6 +10,7 @@ import {
 import { addGptSearchResult, addMoviesBasedOnSearch } from "../utils/slices/gptSearchSlice";
 
 const GptSearchBar = () => {
+  const [searchDisabled,setSearchDisabled]=useState(false);
   const language = useSelector((store) => store.appConfig.language);
   const inputRef = useRef(null);
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ const GptSearchBar = () => {
     return jsonData.results;
   };
   const handleSearchClick = async () => {
+    setSearchDisabled(true);
     const gptQuery =
       "Act as a Movie Recommendation system and suggest popular,top rated movies for the query:" +
       inputRef.current.value +
@@ -44,6 +46,7 @@ const GptSearchBar = () => {
       const gptMovies = await Promise.all(promiseArray);
       dispatch(addMoviesBasedOnSearch(gptMovies));
       dispatch(addGptSearchResult(gptRecommendedMovies));
+      setSearchDisabled(false);
     } catch (error) {
       console.log(error);
     }
@@ -57,6 +60,7 @@ const GptSearchBar = () => {
       ></input>
       <button
         onClick={handleSearchClick}
+        disabled={searchDisabled}
         className="w-[20%] md:w-[22%] px-1 py-2 md:px-4 md:py-2 md:text-lg rounded-md bg-red-600 text-white cursor-pointer"
       >
         {languageWords[language].search}
